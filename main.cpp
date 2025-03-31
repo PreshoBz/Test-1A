@@ -19,6 +19,9 @@ int main() {
     cout << "Preorder Travesal: ";
     tree.preOrder();
 
+    cout << "Postorder Traversal: ";
+    tree.postOrder();
+
 
     
 
