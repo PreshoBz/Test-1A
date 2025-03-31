@@ -29,6 +29,18 @@ int main() {
 
     cout << "Number of noded: " << tree.countNodes() << endl; 
 
+    if(tree.search(40)){
+        cout << "Found" << endl;
+    } else {
+        cout << "Not found" << endl;
+    }
+
+    if(tree.search(90)){
+        cout << "Found" << endl;
+    } else {
+        cout << "Not found" << endl;
+    }
+
 
     
 
