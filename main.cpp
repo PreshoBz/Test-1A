@@ -16,6 +16,8 @@ int main() {
     cout << "Inorder Traversal: ";
     tree.inOrder();
 
+    cout << "Preorder Travesal: ";
+    tree.preOrder();
 
 
     
