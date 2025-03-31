@@ -145,3 +145,46 @@ bool BinaryTree::search(int value){
     }
     return false;
 }
+
+void BinaryTree::deleteValue(int value) {
+    Node* current = root;
+    Node* parent = nullptr;
+    
+    while (current && current->data != value) {
+        parent = current;
+        if (value < current->data) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }    
+    if (!current) return; 
+    
+    if (!current->left || !current->right) {
+        Node* newChild = (current->left) ? current->left : current->right;
+        
+        if (!parent) {
+            root = newChild;
+        } else if (parent->left == current) {
+            parent->left = newChild;
+        } else {
+            parent->right = newChild;
+        }
+        delete current; 
+    } else {
+        Node* replacementParent = current;
+        Node* replacementNode = current->right;
+        while (replacementNode->left) {
+            replacementParent = replacementNode;
+            replacementNode = replacementNode->left;
+        }
+        current->data = replacementNode->data;
+        if (replacementParent->left == replacementNode) {
+            replacementParent->left = replacementNode->right;
+        } else {
+            replacementParent->right = replacementNode->right;
+        }
+        delete replacementNode;
+    }
+}
+
