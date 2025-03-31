@@ -25,4 +25,23 @@ void BinaryTree::insert(int value){
         root = newNode;
         return;
     }
-}
+    Node* current = root;
+    Node* parent = nullptr;
+    while(current){
+        parent = current;
+        if(value < current->data){
+            current = current->left;
+        } else if (value > current->data){
+            current = current->right;
+        } else {
+           delete newNode;
+           return; 
+        }
+        }
+        if(value < parent->data){
+            parent->left = newNode;
+        } else {
+           parent->right = newNode;
+        }
+    }
+    
