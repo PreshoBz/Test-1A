@@ -27,6 +27,8 @@ int main() {
     cout << "Levelorder Travesal: ";
     tree.levelOrder();
 
+    cout << "Number of noded: " << tree.countNodes() << endl; 
+
 
     
 
