@@ -22,6 +22,8 @@ int main() {
     cout << "Postorder Traversal: ";
     tree.postOrder();
 
+    cout << "Height of the tree: " << tree.findHeight() << endl;
+
 
     
 

@@ -83,3 +83,22 @@ void BinaryTree::postOrder(){
     postOrder(root);
     cout << endl;
 }
+
+int BinaryTree::findHeight(){
+    if(!root) return -1;
+    queue<Node*> q;
+    q.push(root);
+    int height = -1;
+
+    while(!q.empty()){
+        int levelSize = q.size();
+        for(int i = 0; i < levelSize; i++){
+            Node* current = q.front();
+            q.pop();
+            if (current->left) q.push(current->left);
+            if(current->right) q.push(current->right);
+        }
+        height++;
+    }
+    return height;
+}
