@@ -19,3 +19,10 @@ void BinaryTree::deleteTree(Node* node){
     }
 }
 
+void BinaryTree::insert(int value){
+    Node* newNode = new Node(value);
+    if(!root){
+        root = newNode;
+        return;
+    }
+}
