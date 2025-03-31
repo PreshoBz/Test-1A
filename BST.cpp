@@ -70,3 +70,16 @@ void BinaryTree::preOrder(){
     preOrder(root);
     cout << endl;
 }
+
+void BinaryTree::postOrder(Node* node){
+    if(node){
+        postOrder(node->left);
+        postOrder(node->right);
+        cout << node->data << " ";
+    }
+}
+
+void BinaryTree::postOrder(){
+    postOrder(root);
+    cout << endl;
+}
