@@ -120,3 +120,19 @@ void BinaryTree::printLevel(Node* node, int level){
         printLevel(node->right, level - 1);
       }
 }
+
+int BinaryTree::countNodes(){
+    if(!root) return 0;
+    int count = 0;
+    queue<Node*> q;
+    q.push(root);
+
+    while(!q.empty()){
+        Node* current = q.front();
+        q.pop();
+        count++;
+        if(current->left)q.push(current->left);
+        if(current->right)q.push(current->right);
+    }
+    return count;
+}
