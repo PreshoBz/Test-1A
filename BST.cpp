@@ -45,3 +45,15 @@ void BinaryTree::insert(int value){
         }
     }
     
+void BinaryTree::inOrder(Node* node){
+    if(node){
+        inOrder(node->left);
+        cout << node->data << " ";
+        inOrder(node->right);
+    }
+}
+
+void BinaryTree::inOrder(){
+    inOrder(root);
+    cout << endl;
+}
