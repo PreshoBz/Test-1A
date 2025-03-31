@@ -102,3 +102,21 @@ int BinaryTree::findHeight(){
     }
     return height;
 }
+
+void BinaryTree::levelOrder(){
+    int height = findHeight();
+    for(int i = 0; i<= height; i++){
+        printLevel(root, i);
+    }
+    cout << endl;
+}
+
+void BinaryTree::printLevel(Node* node, int level){
+    if(!node)return;
+    if(level == 0){
+        cout << node->data << " ";
+      } else {
+        printLevel(node->left, level - 1);
+        printLevel(node->right, level - 1);
+      }
+}
