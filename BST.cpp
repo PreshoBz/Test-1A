@@ -57,3 +57,16 @@ void BinaryTree::inOrder(){
     inOrder(root);
     cout << endl;
 }
+
+void BinaryTree::preOrder(Node* node){
+    if(node){
+        cout << node->data << " ";
+        preOrder(node->left);
+        preOrder(node->right);
+    }
+}
+
+void BinaryTree::preOrder(){
+    preOrder(root);
+    cout << endl;
+}
