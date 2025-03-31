@@ -41,7 +41,13 @@ int main() {
         cout << "Not found" << endl;
     }
 
-    
+    tree.deleteValue(30);
+
+    cout << "Inorder after deletion: ";
+    tree.inOrder();
+
+
+
 
 
     
