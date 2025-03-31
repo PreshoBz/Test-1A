@@ -136,3 +136,12 @@ int BinaryTree::countNodes(){
     }
     return count;
 }
+
+bool BinaryTree::search(int value){
+    Node* current = root;
+    while(current){
+        if(current->data == value) return true;
+        current = (value < current->data) ? current->left: current->right;
+    }
+    return false;
+}
