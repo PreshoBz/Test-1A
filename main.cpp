@@ -24,6 +24,9 @@ int main() {
 
     cout << "Height of the tree: " << tree.findHeight() << endl;
 
+    cout << "Levelorder Travesal: ";
+    tree.levelOrder();
+
 
     
 
