@@ -13,6 +13,11 @@ int main() {
     tree.insert(60);
     tree.insert(80);
 
+    cout << "Inorder Traversal: ";
+    tree.inOrder();
+
+
+
     
 
     return 0;
