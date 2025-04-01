@@ -22,10 +22,10 @@ int main() {
     cout << "Postorder Traversal: ";
     tree.postOrder();
 
-    cout << "Height of the tree: " << tree.findHeight() << endl;
-
     cout << "Levelorder Travesal: ";
     tree.levelOrder();
+
+    cout << "Height of the tree: " << tree.findHeight() << endl;
 
     cout << "Number of noded: " << tree.countNodes() << endl; 
 
@@ -46,10 +46,9 @@ int main() {
     cout << "Inorder after deletion: ";
     tree.inOrder();
 
+    cout << "Number of noded: " << tree.countNodes() << endl; 
 
-
-
-
+    
     
 
     return 0;
